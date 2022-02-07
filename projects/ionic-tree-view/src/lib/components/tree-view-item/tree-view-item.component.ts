@@ -17,6 +17,7 @@ export class TreeViewItemComponent implements OnInit {
     @Input() public icons: Array<string>;
 
     @Output() itemCheckedEvent = new EventEmitter<ITreeItemChecked>();
+
     notCollapsedIcon: string = 'arrow-dropdown-circle';
     collapsedIcon: string = 'arrow-dropright-circle';
     constructor(
@@ -29,8 +30,8 @@ export class TreeViewItemComponent implements OnInit {
             this.item.checked = false;
         }
         if(icons){
-          notCollapsedIcon = icons[0] ||notCollapsedIcon 
-          collapsedIcon = icons[1] || collapsedIcon
+          this.notCollapsedIcon = icons[0] || this.notCollapsedIcon 
+          this.collapsedIcon = icons[1] || this.collapsedIcon
         }
     }
 
