@@ -3,6 +3,7 @@
         *ngFor="let item of treeViewItems"
         [treeViewName]="treeViewName"
         [persistedName]="persistedName"
+        [iconName]="iconName"
         [item]="item"
         (itemCheckedEvent)="itemChecked($event)"
     ></tree-view-items>

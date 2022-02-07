@@ -14,6 +14,7 @@ export class TreeViewItemComponent implements OnInit {
     @Input() public persistedName: string;
     @Input() public treeViewName: string;
     @Input() public childCheked: boolean;
+    @Input() public iconName: string;
 
     @Output() itemCheckedEvent = new EventEmitter<ITreeItemChecked>();
 

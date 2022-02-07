@@ -12,6 +12,7 @@ export class TreeViewItemsComponent {
     @Input() public item: ITreeItem;
     @Input() public persistedName: string;
     @Input() public treeViewName: string;
+    @Input() public iconName: string;
 
     @Output() public itemCheckedEvent = new EventEmitter<ITreeItemChecked>();
 
