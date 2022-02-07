@@ -14,10 +14,11 @@ export class TreeViewItemComponent implements OnInit {
     @Input() public persistedName: string;
     @Input() public treeViewName: string;
     @Input() public childCheked: boolean;
-    @Input() public iconName: string;
+    @Input() public icons: Array<string>;
 
     @Output() itemCheckedEvent = new EventEmitter<ITreeItemChecked>();
-
+    notCollapsedIcon: string = 'arrow-dropdown-circle';
+    collapsedIcon: string = 'arrow-dropright-circle';
     constructor(
         private treeViewService: TreeViewService,
         private eventService: TreeViewEventService
@@ -26,6 +27,10 @@ export class TreeViewItemComponent implements OnInit {
     public ngOnInit() {
         if (!!this.item && isNullOrUndefined(this.item?.checked)) {
             this.item.checked = false;
+        }
+        if(icons){
+          notCollapsedIcon = icons[0] ||notCollapsedIcon 
+          collapsedIcon = icons[1] || collapsedIcon
         }
     }
 

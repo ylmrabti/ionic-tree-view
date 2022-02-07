@@ -89,7 +89,9 @@ Once your library is imported, you can use component in your Ionic application:
   <tree-view
       [items]="items"
       [persistedName]="'MyTreeView'"
-      [treeViewName]="'MyTreeView'">
+      [treeViewName]="'MyTreeView'"
+      [icons]="icons"
+      >
   </tree-view>
 ```
 
@@ -100,6 +102,8 @@ Once your library is imported, you can use component in your Ionic application:
   public persistedName = "MyItemsPersisted";
   //Optional - Key of TreeView
   public treeViewName = "MyItemsTreeView";
+  //Optional - Key of TreeView
+  public icons = ['icon for collapsed elements', 'icon for not collapsed elements'];
 ```
 
 ## License

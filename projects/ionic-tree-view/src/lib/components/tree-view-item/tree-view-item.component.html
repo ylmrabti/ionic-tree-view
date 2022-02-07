@@ -4,11 +4,11 @@
             <ng-container *ngIf="couldBeCollapse(item)">
                 <ion-icon
                     *ngIf="!item.items.collapsed"
-                    [name]="iconName || 'arrow-dropdown-circle'"
+                    [name]="notCollapsedIcon"
                 ></ion-icon>
                 <ion-icon
                     *ngIf="item.items.collapsed"
-                    [name]="iconName || 'arrow-dropright-circle'"
+                    [name]="collapsedIcon"
                 ></ion-icon>
             </ng-container>
         </div>
