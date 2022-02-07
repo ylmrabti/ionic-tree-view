@@ -29,9 +29,9 @@ export class TreeViewItemComponent implements OnInit {
         if (!!this.item && isNullOrUndefined(this.item?.checked)) {
             this.item.checked = false;
         }
-        if(icons){
-          this.notCollapsedIcon = icons[0] || this.notCollapsedIcon 
-          this.collapsedIcon = icons[1] || this.collapsedIcon
+        if(this.icons){
+          this.notCollapsedIcon = this.icons[0] || this.notCollapsedIcon 
+          this.collapsedIcon = this.icons[1] || this.collapsedIcon
         }
     }
 
